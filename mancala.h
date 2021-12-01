@@ -1,4 +1,11 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <iterator>
+#include <climits>
 #include <vector>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
@@ -31,7 +38,7 @@ public:
 	enum Side { HUMAN, COMPUTER };
 	enum Lastpit { TRYAGAIN, STORE, EMPTY, PIT };
 	enum Tactic { GREEDY, LOOKAHEAD };
-	//enum Game {STANDARD, AVALANCHE };
+	enum Game {STANDARD, AVALANCHE };
 
 	// constructor
 	MancalaPlayer(MancalaBoard board, Side side);
@@ -40,11 +47,10 @@ public:
 	virtual bool getTurn() const = 0;
 	virtual void setTurn(bool turn) = 0;
 	// the chooseMove functions have a different implementation for HUMAN and CPU
-	virtual int chooseMove(int& bestMove, Side side, MancalaBoard board, Tactic tactic) = 0;
+	virtual int chooseMove(int& bestMove, Side side, MancalaBoard board, Tactic tactic, Game game) = 0;
 	
 	// these functions are the same for every player
-	Lastpit sow(MancalaBoard& board, Side side, int frompit);
-	//Lastpit sow(MancalaBoard& board, Side side, int frompit, Game game);
+	Lastpit sow(MancalaBoard& board, Side side, int frompit, Game game);
 	void steal(MancalaBoard& board, Side side, int lastpit);
 	
 private:
@@ -59,7 +65,7 @@ public:
 	Human(MancalaBoard& board);
 
 	// think of a move...
-	int chooseMove(int& bestMove, Side side, MancalaBoard board, Tactic tactic);
+	int chooseMove(int& bestMove, Side side, MancalaBoard board, Tactic tactic, Game game);
 	
 	// get status of the game (who's turn it is)
 	bool getTurn() const { return turn; }
@@ -76,7 +82,7 @@ public:
 	Computer(MancalaBoard& board);
 	
 	// think of a move...
-	int chooseMove(int& bestMove, Side side, MancalaBoard board, Tactic tactic);
+	int chooseMove(int& bestMove, Side side, MancalaBoard board, Tactic tactic, Game game);
 	
 	// get status of the game (who's turn it is)
 	bool getTurn() const { return turn; }
