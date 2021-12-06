@@ -1,7 +1,7 @@
 EC327 FINAL PROJECT (Team probable-broccoli)
 Fall 2021
 
-Project Goals: Make a functional Mancala game with C++ with different modes with player-adjustable game selections. 
+Project Goals: Make a functional Mancala game with C++ including different modes and player-adjustable game selections. 
 
 
 YouTube link:
