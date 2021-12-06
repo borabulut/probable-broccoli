@@ -19,7 +19,7 @@ Human.o: Human.h MancalaPlayer.h
 Computer.o: Computer.h MancalaPlayer.h
 	$(CC) -c Computer.cpp -o Computer.o
 
-main.o: MancalaBoard.h MancalaPlayer.h Human.h Computer.h
+main.o: MancalaBoard.h MancalaPlayer.h Human.h Computer.h Input_Handling.h
 	$(CC) -c main.cpp -o main.o
 
 clean:
