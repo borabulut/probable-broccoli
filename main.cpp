@@ -4,11 +4,35 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <limits> //for cin.clear() & cin.ignore()
 //#include "mancala.h"
 #include "MancalaBoard.h"
 #include "MancalaPlayer.h"
 #include "Human.h"
 #include "Computer.h"
+#include "Input_Handling.h"
+
+bool endGame() {
+	char letter;
+	cin.clear(); //clears any excess parameters on command line
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	do {
+		cout << "End game? (y/n) ";
+		cin >> letter;
+		switch (letter) {
+			case 'y': case 'Y':
+				return true; //if want to end game return true
+				break;
+			case 'n': case 'N':
+				return false; //if want to continue return false
+				break;
+			default:
+				cout << "Error: Invalid input" << endl; //error checking
+				break;
+		}
+	} while (true);
+	return false;
+}
 
 using namespace std;
 
@@ -90,10 +114,22 @@ int main() {
 		if (player1.getTurn() == true) { //If player 1 turn
 			int frompit;
 			do { //get user input
+				cout << "Enter any letter to end the game" << endl;
 				cout << "Player1 sow: " << flush;
-				cin >> frompit;
-
-				reply = player1.sow(mancala, MancalaPlayer::HUMAN, frompit, game);
+				try {
+					if (!(cin >> frompit)) {
+						Invalid_Input inval("EndGame");
+						throw inval;
+					} else {
+						reply = player1.sow(mancala, MancalaPlayer::HUMAN, frompit, game);
+					}
+				} catch (Invalid_Input inval) {
+					if (endGame()) {
+						exit(0);
+					} else {
+						reply = MancalaPlayer::TRYAGAIN;
+					}
+				}
 			} while(reply == MancalaPlayer::TRYAGAIN); //if not valid input will error check
 
 			if (reply == MancalaPlayer::STORE) { // LAST SEED IN STORE, GO AGAIN
@@ -127,10 +163,22 @@ int main() {
 				}
 			} else { //if multiplayer
 				do {
+					cout << "Enter any letter to end the game" << endl;
 					cout << "Player2 sow: " << flush;
-					cin >> frompit;
-
-					reply = player2.sow(mancala, MancalaPlayer::COMPUTER, frompit, game);
+					try {
+						if (!(cin >> frompit)) {
+							Invalid_Input inval("EndGame");
+							throw inval;
+						} else {
+							reply = player2.sow(mancala, MancalaPlayer::COMPUTER, frompit, game);
+						}
+					} catch (Invalid_Input inval) {
+						if (endGame()) {
+							exit(0);
+						} else {
+							reply = MancalaPlayer::TRYAGAIN;
+						}
+					}
 				} while(reply == MancalaPlayer::TRYAGAIN);
 
 				if (reply == MancalaPlayer::STORE) { // LAST SEED IN STORE, GO AGAIN
