@@ -1,0 +1,14 @@
+Instructions for installing SFML library to Linux
+
+//Install the library
+sudo apt-get install libsfml-dev
+
+//Need to compile in this order
+1.
+g++ -c audiomain.cpp audio.cpp
+
+2.
+g++ audiomain.o audio.o -o minimusic -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+
+3.
+./minimusic
