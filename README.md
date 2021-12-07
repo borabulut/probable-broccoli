@@ -11,6 +11,9 @@ Mancala is a turn-based strategy board game with a simple set up of stones and p
 
 Another mode that was included is known as "Avalanche" mode, in which the regular rules are altered so that the resulting stone movements resemble an avalanche. Instead of having the turn end when a stone is not added to the player's main pit, the turn only ends if the last stone lands in an empty pit. 
 
+How to Build the Game:
+
+To build the game, the user launches terminal, ensures the terminal directory is set to the directory that contains all of the game files. User then types ‘make’ and the Makefile generates the objects. Then user enters ‘./MancalaGame’, and the game is initialized.
 
 YouTube link:
 
