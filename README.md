@@ -13,7 +13,9 @@ Another mode that was included is known as "Avalanche" mode, in which the regula
 
 How to Build the Game:
 
-To build the game, the user launches terminal, ensures the terminal directory is set to the directory that contains all of the game files. User then types ‘make’ and the Makefile generates the objects. Then user enters ‘./MancalaGame’, and the game is initialized.
+To build the Mancala game, the user launches terminal, ensures the terminal directory is set to the directory that contains all of the game files. User then types ‘make’ and the Makefile generates the objects. Then user enters ‘./MancalaGame’, and the game is initialized.
+
+To build the music player, the SFML library needs to be installed ahead of compile. The instructions for Linux OS is included in the folder under "sudo instructions" - detailed instructions for other OS can be found at link: https://www.sfml-dev.org/tutorials/2.5/. After installing the library with provided terminal line, compiling the program is very quickly done with the 3 instruction codes in the file. 
 
 YouTube link:
 
@@ -35,4 +37,12 @@ Credit for source code:
 boaz001 at https://github.com/boaz001/mancala
 
 Credit for music creators:
+
+JuliusH: https://pixabay.com/users/juliush-3921568/?tab=audio&utm_source=link-attribution&utm_medium=referral&utm_campaign=audio&utm_content=2641
+
+PDillow: https://pixabay.com/users/phill_dillow-16161775/?tab=audio&utm_source=link-attribution&utm_medium=referral&utm_campaign=audio&utm_content=543
+
+audiomirage: https://freesound.org/people/audiomirage/
+
+bloodpixelhero: https://freesound.org/people/BloodPixelHero/
 
