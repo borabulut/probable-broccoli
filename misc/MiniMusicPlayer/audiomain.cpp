@@ -11,7 +11,7 @@ int main(){
 	do {
 	int choose;
 
-	cout<<"Use Space or press window close to exit out of present music window to return to selection"<<endl;
+	cout<<"Use Escape or press window close to exit out of present music window to return to selection"<<endl;
 	cout<<"1: Daydream"<<endl;
 	cout<<"2: 16bit BGM"<<endl;
 	cout<<"3: Jazz loop"<<endl;
