@@ -1,5 +1,5 @@
-EC327 FINAL PROJECT (Team Probable Broccoli)
-Fall 2021
+# EC327 Final Project
+# Team: Probable Broccoli
 
 Project Overview: 
 
@@ -34,6 +34,7 @@ Zachary Tan - Technical lead @ zdltan20@bu.edu
 
 
 Credit for source code: 
+
 boaz001 at https://github.com/boaz001/mancala
 
 Credit for music creators:
