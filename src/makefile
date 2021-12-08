@@ -1,6 +1,6 @@
 CC=g++ -g
 
-OBJS=main.o MancalaBoard.o MancalaPlayer.o Human.o Computer.o
+OBJS=main.o MancalaBoard.o MancalaPlayer.o Human.o Computer.o Image.o
 
 default: MancalaGame
 
@@ -19,8 +19,11 @@ Human.o: Human.h MancalaPlayer.h
 Computer.o: Computer.h MancalaPlayer.h
 	$(CC) -c Computer.cpp -o Computer.o
 
-main.o: MancalaBoard.h MancalaPlayer.h Human.h Computer.h Input_Handling.h
+Image.o: imageout.h
+	$(CC) -c imageout.cpp -o Image.o
+
+main.o: MancalaBoard.h MancalaPlayer.h Human.h Computer.h Input_Handling.h imageout.h
 	$(CC) -c main.cpp -o main.o
 
 clean:
-	rm $(OBJS) MancalaGame *.exe
+	rm $(OBJS) MancalaGame
