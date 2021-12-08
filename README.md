@@ -17,7 +17,7 @@ To build the Mancala game, the user launches terminal, ensures the terminal dire
 
 To build the music player, the SFML library needs to be installed ahead of compile. The instructions for Linux OS is included in the folder under "sudo instructions" - detailed instructions for other OS can be found at link: https://www.sfml-dev.org/tutorials/2.5/. After installing the library with provided terminal line, compiling the program is very quickly done with the 3 instruction codes in the file. 
 
-YouTube link:
+YouTube link: https://www.youtube.com/watch?v=5ZQ8WTBtTb4
 
 
 Contributors: 
