@@ -2,13 +2,17 @@ Instructions for installing SFML library to Linux
 
 //Install the library
 sudo apt-get install libsfml-dev
+*other OS install library instructions at https://www.sfml-dev.org/tutorials/2.5/
 
-//Need to compile in this order
-1.
+//Need to compile in this order on terminal
+1)
 g++ -c audiomain.cpp audio.cpp
 
-2.
+2)
 g++ audiomain.o audio.o -o minimusic -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-3.
+3)
 ./minimusic
+
+Note: The companion music files and image are located inside folder "audiofiles", which is included in the same directory inside the repository. 
+Thank you for playing, literally!
