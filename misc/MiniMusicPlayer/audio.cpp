@@ -37,7 +37,7 @@ void backgroundmusic1(){
 	Music m1;
 	if(!m1.openFromFile("audiofiles/audiomirage__daydream.wav"))
 			exit(0);
-	m1.setLoop(false);
+	m1.setLoop(true);
 	m1.play();
 
 	while (game.isOpen())
@@ -52,7 +52,7 @@ void backgroundmusic1(){
 			game.clear();
 			game.draw(sBackground1);
 			game.display();
-			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 			{
     		game.close();
 			}
@@ -69,7 +69,7 @@ void backgroundmusic2(){
 	Music m2;
 	if(!m2.openFromFile("audiofiles/bloodpixelhero_background.wav"))
 		exit(0);
-	m2.setLoop(false);
+	m2.setLoop(true);
 	m2.play();
 
 	while (game.isOpen())
@@ -83,7 +83,7 @@ void backgroundmusic2(){
 				game.clear();
 				game.draw(sBackground1);
 				game.display();
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				{
 					game.close();
 				}
@@ -99,7 +99,7 @@ void backgroundmusic3(){
 	Music m1;
 	if(!m1.openFromFile("audiofiles/JuliusH_jazz_loop.wav"))
 		 exit(0);
-	m1.setLoop(false);
+	m1.setLoop(true);
 	m1.play();
 
 	while (game.isOpen())
@@ -113,7 +113,7 @@ void backgroundmusic3(){
 				game.clear();
 				game.draw(sBackground1);
 				game.display();
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				{
 					game.close();
 				}
@@ -129,7 +129,7 @@ void backgroundmusic4(){
 	Music m1;
 	if(!m1.openFromFile("audiofiles/PDillow_chillbeatmix.wav"))
 		 exit(0);
-	m1.setLoop(false);
+	m1.setLoop(true);
 	m1.play();
 
 	while (game.isOpen())
@@ -143,7 +143,7 @@ void backgroundmusic4(){
 					game.clear();
 					game.draw(sBackground1);
 					game.display();
-					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+					if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 					{
 						game.close();
 					}
@@ -159,7 +159,7 @@ void backgroundmusic5(){
 	Music m1;
  	if(!m1.openFromFile("audiofiles/PDillow_lofi_basskeyboard.wav"))
  		exit(0);
- 	m1.setLoop(false);
+ 	m1.setLoop(true);
  	m1.play();
 
 	while (game.isOpen())
@@ -173,7 +173,7 @@ void backgroundmusic5(){
 				game.clear();
 				game.draw(sBackground1);
 				game.display();
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				{
 					game.close();
 				}
@@ -189,7 +189,7 @@ void backgroundmusic6(){
 
 	if(!m1.openFromFile("audiofiles/PDillow_lofi_chill.wav"))
 		 exit(0);
-	m1.setLoop(false);
+	m1.setLoop(true);
 	m1.play();
 
 		while (game.isOpen())
@@ -203,7 +203,7 @@ void backgroundmusic6(){
 				game.clear();
 				game.draw(sBackground1);
 				game.display();
-				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 				{
 					game.close();
 				}
